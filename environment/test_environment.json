@@ -1,0 +1,15 @@
+{
+	"id": "7e082ujf-83je-9282-8iiu-01owa68c6f8a",
+	"name": "test_environment",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://www.google.com",
+			"description": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-07-18T06:01:56.980Z",
+	"_postman_exported_using": "Postman/6.6.1"
+}

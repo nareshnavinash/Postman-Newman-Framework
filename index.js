@@ -3,6 +3,7 @@ const newman = require('newman'); // require newman in your project
 // call newman.run to pass `options` object and wait for callback
 newman.run({
     collection: require('./collections/file_upload_collection.json'),
+    environment: require('./environment/test_environment.json'),
     reporters: ['cli', 'json', 'html', 'allure'],
     reporter: {
         html: {
