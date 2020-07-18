@@ -1,0 +1,24 @@
+{
+    "info": {
+        "name": "file-upload"
+    },
+    "item": [
+        {
+            "request": {
+                "url": "https://postman-echo.com/post",
+                "method": "POST",
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "enabled": true,
+                            "src": "./data_files/sample-file.txt"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

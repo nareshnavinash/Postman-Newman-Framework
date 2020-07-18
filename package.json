@@ -1,0 +1,36 @@
+{
+  "name": "postman-newman-framework",
+  "version": "1.0.0",
+  "description": "Framework for postman with newman and custom reporting",
+  "main": "index.js",
+  "dependencies": {
+    "newman": "^5.1.2",
+    "newman-reporter-allure": "^1.0.7",
+    "newman-reporter-html": "^1.0.5",
+    "newman-reporter-influxdb": "^1.1.0"
+  },
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nareshnavinash/Postman-Newman-Framework.git"
+  },
+  "keywords": [
+    "newman",
+    "postman",
+    "framework",
+    "custom",
+    "reporting",
+    "CI",
+    "influxdb",
+    "html",
+    "report"
+  ],
+  "author": "Naresh Sekar",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nareshnavinash/Postman-Newman-Framework/issues"
+  },
+  "homepage": "https://github.com/nareshnavinash/Postman-Newman-Framework#readme"
+}
