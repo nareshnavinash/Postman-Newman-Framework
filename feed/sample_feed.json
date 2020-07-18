@@ -1,0 +1,11 @@
+{
+    "runs":[
+        {
+            "collection": "./collections/file_upload_collection.postman_collection.json",
+            "environment": "./environment/test_environment.json"
+        },
+        {
+            "collection": "./collections/test_scripts.postman_collection.json"
+        }
+    ]
+}
