@@ -4,6 +4,7 @@
   "description": "Framework for postman with newman and reporting",
   "main": "index.js",
   "dependencies": {
+    "allure-commandline": "^2.13.0",
     "newman": "^5.1.2",
     "newman-reporter-allure": "^1.0.7",
     "newman-reporter-html": "^1.0.5"
@@ -11,7 +12,7 @@
   "scripts": {
     "test": "node index.js",
     "allure-serve": "allure serve reports/allure",
-    "clear-report": "node clear_reports.js"
+    "clear-report": "node library/clear_reports.js"
   },
   "repository": {
     "type": "git",
