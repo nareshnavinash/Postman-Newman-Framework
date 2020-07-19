@@ -109,8 +109,55 @@ pipeline {
 
 ## Breakdown in to testcases
 
+### Feed files
 
+The feed file is the core structure for this framework to function. In the feed file, one has to specify the collections and environment json files path or the url in the array format inside `runs` variable like,
 
+```
+{
+    "runs":[
+        {
+            "collection": "./collections/test_scripts.postman_collection.json"
+        },
+        {
+            "collection": "./collections/file_upload_collection.postman_collection.json",
+            "environment": "./environment/test_environment.json"
+        }
+        
+    ]
+}
+```
+
+If we have only collections that need to be run as part of the test, then have `collection` alone. If we have collection and environment files, then we need to specify both `collection` and `environment` in json format.
+
+When we initiate the tests, the `runs` array will be iterated and all the tests will be run using `newman` package. 
+
+Ideally we should have the postman collection link as the feed file input, this gives us the leverage of modifying the tests via postman without touching the core framework. The ideal feed file will be,
+
+```
+{
+    "runs":[
+        {
+            "collection": "https://www.getpostman.com/collections/57c3cfef239jeijw39d93"
+        },
+        {
+            "collection": "https://www.getpostman.com/collections/57c3cfef239jeijwew282",
+            "environment": "./environment/test_environment.json"
+        }
+        
+    ]
+}
+```
+
+Once the feed file is prepared, one can directly trigger the test by,
+
+```
+npm run test -- <Feed_file_which_contains_input_collections>
+```
+
+### Folder structure
+
+If we need to have the 
 
 
 ## Built With
