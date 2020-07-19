@@ -1,16 +1,15 @@
 {
   "name": "postman-newman-framework",
   "version": "1.0.0",
-  "description": "Framework for postman with newman and custom reporting",
+  "description": "Framework for postman with newman and reporting",
   "main": "index.js",
   "dependencies": {
     "newman": "^5.1.2",
     "newman-reporter-allure": "^1.0.7",
-    "newman-reporter-html": "^1.0.5",
-    "newman-reporter-influxdb": "^1.1.0"
+    "newman-reporter-html": "^1.0.5"
   },
   "scripts": {
-    "test": "start"
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
