@@ -33,6 +33,14 @@ class NewmanConfig{
         return './reports/allure'
     }
 
+    static newman_json_report_path() {
+        return './reports/json/'
+    }
+
+    static newman_html_report_path() {
+        return './reports/html/'
+    }
+
     static runCollectionWithEnv(collection, environment){
         // call newman.run to pass `options` object and wait for callback
         var file_name = collection.split("/")
@@ -42,10 +50,13 @@ class NewmanConfig{
             reporters: NewmanConfig.reporters_list(),
             reporter: {
                 html: {
-                    export: './reports/'.concat(file_name[file_name.length - 1]).concat('.html') // If not specified, the file will be written to `newman/` in the current working directory.
+                    export: NewmanConfig.newman_html_report_path().concat(file_name[file_name.length - 1]).concat('.html') // If not specified, the file will be written to `newman/` in the current working directory.
                 },
                 allure: {
                     export: NewmanConfig.allure_report_path()
+                },
+                json: {
+                    export: NewmanConfig.newman_json_report_path().concat(file_name[file_name.length - 1]).concat('.json')
                 }
             }
         }, function (err) {
@@ -62,10 +73,13 @@ class NewmanConfig{
             reporters: NewmanConfig.reporters_list(),
             reporter: {
                 html: {
-                    export: './reports/'.concat(file_name[file_name.length - 1]).concat('.html') // If not specified, the file will be written to `newman/` in the current working directory.
+                    export: NewmanConfig.newman_html_report_path().concat(file_name[file_name.length - 1]).concat('.html') // If not specified, the file will be written to `newman/` in the current working directory.
                 },
                 allure: {
                     export: NewmanConfig.allure_report_path()
+                },
+                json: {
+                    export: NewmanConfig.newman_json_report_path().concat(file_name[file_name.length - 1]).concat('.json')
                 }
             }
         }, function (err) {
