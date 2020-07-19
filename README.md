@@ -157,7 +157,7 @@ npm run test -- <Feed_file_which_contains_input_collections>
 
 ### Folder structure
 
-If we need to have the 
+If we need to have the collections inside the folder, then its advisible to have the collections in `collections` folder. All the environment files should be kept under `environment` folder. If we have multiple feed files to run at different stage of development or for different microservices, then have all the feed files under `feed` folder.
 
 
 ## Built With
