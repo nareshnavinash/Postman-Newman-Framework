@@ -9,7 +9,9 @@
     "newman-reporter-html": "^1.0.5"
   },
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "allure-serve": "allure serve reports/allure",
+    "clear-report": "node clear_reports.js"
   },
   "repository": {
     "type": "git",
